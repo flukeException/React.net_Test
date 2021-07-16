@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Pelle\\source\\repos\\CSharpUnitTests\\CSharpUnitTests.csproj": {}
+    "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\CSharpUnitTests\\CSharpUnitTests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Pelle\\source\\repos\\CSharpUnitTests\\CSharpUnitTests.csproj": {
+    "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\CSharpUnitTests\\CSharpUnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pelle\\source\\repos\\CSharpUnitTests\\CSharpUnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\CSharpUnitTests\\CSharpUnitTests.csproj",
         "projectName": "CSharpUnitTests",
-        "projectPath": "c:\\Users\\Pelle\\source\\repos\\CSharpUnitTests\\CSharpUnitTests.csproj",
+        "projectPath": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\CSharpUnitTests\\CSharpUnitTests.csproj",
         "packagesPath": "C:\\Users\\Pelle\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pelle\\source\\repos\\CSharpUnitTests\\obj\\",
+        "outputPath": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\CSharpUnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pelle\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\Pelle\\source\\repos\\react-app\\react-app.csproj": {
-                "projectPath": "c:\\Users\\Pelle\\source\\repos\\react-app\\react-app.csproj"
+              "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\react-app\\react-app.csproj": {
+                "projectPath": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\react-app\\react-app.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "c:\\Users\\Pelle\\source\\repos\\react-app\\react-app.csproj": {
+    "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\react-app\\react-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pelle\\source\\repos\\react-app\\react-app.csproj",
+        "projectUniqueName": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\react-app\\react-app.csproj",
         "projectName": "react-app",
-        "projectPath": "c:\\Users\\Pelle\\source\\repos\\react-app\\react-app.csproj",
+        "projectPath": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\react-app\\react-app.csproj",
         "packagesPath": "C:\\Users\\Pelle\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pelle\\source\\repos\\react-app\\obj\\",
+        "outputPath": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\react-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pelle\\AppData\\Roaming\\NuGet\\NuGet.Config",

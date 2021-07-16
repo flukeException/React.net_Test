@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using react_app.Models;
 using react_app.Models.DataModels;
 using react_app.Datastore;
+;
 
 namespace react_app.Controllers
 { 
@@ -29,5 +31,23 @@ namespace react_app.Controllers
 
             return Ok(LogEntriesRepo.Instance.GetDayLogsforDate(new DateTime(2021, 07, 08, 08, 00, 00)));
         }     
+
+        [HttpPost]
+        public IActionResult AddEntry(FormCollection fc)
+        {            
+            
+            LogType logType = new LogType(fc["entryType"].ToString());           
+           
+            LogEntry logEntry = new LogEntry
+            (
+                DateTime.Parse(fc["startDateTime"].ToString()),
+                DateTime.Parse(fc["endDateTime"].ToString()), 
+                logType
+            );
+
+            LogEntriesRepo.Instance.AddLogEntry(logEntry);
+            return Ok(logEntry);
+
+        }
     }
 }

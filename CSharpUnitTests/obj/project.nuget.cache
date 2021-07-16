@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8SOFquck/VxJeGqP9QWQuV9m7+howqq6DSImU6IWEs6I+12cEA+17hfRD+QwmKURCanEeERS6vnyvn/M6L3F4Q==",
+  "dgSpecHash": "4Q8pjNJTTYxUYmFR+3msnsW7WZA0T8n0v5VlcM+wpuCfW3KQS6/G42g3g+fWfIoR4a3j7GhQ2mdrfPZsBC9dLw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Pelle\\source\\repos\\CSharpUnitTests\\CSharpUnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Pelle\\source\\repos\\TimeLogProject\\CSharpUnitTests\\CSharpUnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pelle\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Pelle\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\5.0.7\\microsoft.aspnetcore.spaservices.extensions.5.0.7.nupkg.sha512",
