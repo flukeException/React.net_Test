@@ -1,26 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class LogsForDays extends Component {
-  static displayName = LogsForDays.name;
-
-  constructor(props) {
-    super(props);
-    if(!props.logs){
-      this.state = {logs: [{type: {typeName: "Loading..."}},]}
-    }
-    else{
-      this.state = { logs: props.parentLogs,};
-    }  
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({ logs: nextProps.parentLogs });  
-  }
-  localTime(date){
+export default function LogsForDays(props) {
+ 
+  const localTime = (date) => {
     return new Date(date).toLocaleString();
-  }
-
-  render() {    
+  }  
     return (
       <div>
         <h1 id="logsTable" >Log Entries</h1>       
@@ -35,10 +19,10 @@ export class LogsForDays extends Component {
                 </tr>
                 </thead>
                 <tbody>                
-                {this.state.logs.map(entry =>
+                {props.parentLogs.map(entry =>
                     <tr key={entry.startTime}>
-                    <td>{this.localTime(entry.startTime)}</td>
-                    <td>{this.localTime(entry.endTime)}</td>
+                    <td>{localTime(entry.startTime)}</td>
+                    <td>{localTime(entry.endTime)}</td>
                     <td>{entry.type.typeName}</td>
                     <td>{entry.hours}</td>                                        
                     </tr>
@@ -48,5 +32,5 @@ export class LogsForDays extends Component {
         </div>
       </div>
     );
-  }
+  
 }

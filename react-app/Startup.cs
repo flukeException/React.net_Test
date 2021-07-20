@@ -1,12 +1,10 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc;
 
 namespace react_app
 {
@@ -52,12 +50,13 @@ namespace react_app
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-           
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
@@ -67,14 +66,14 @@ namespace react_app
                 endpoints.MapControllerRoute(
                     "counter",
                     "/counter",
-                    new { controller = "Home", action = "Index"});
+                    new { controller = "Home", action = "Index" });
                 endpoints.MapControllerRoute(
                     "fetch-data",
                     "/fetch-data",
-                    new { controller = "Home", action = "Index"});
+                    new { controller = "Home", action = "Index" });
             });
 
-         
+
 
             app.UseSpa(spa =>
             {

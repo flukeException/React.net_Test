@@ -1,36 +1,38 @@
-import React, { Component, }from 'react';
+import React from 'react';
+import {useForm,} from 'react-hook-form';
 
+export default function AddTimeLog(){
 
-export class AddTimeLog extends Component {
-  static displayName = AddTimeLog.name;
-  
-  constructor(props) {
-    super(props);    
-    
-  }  
+      const {register, handleSubmit,} = useForm();
+      const onSubmit = (data) => {
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+      };
+      fetch('logentries/add', requestOptions)
+          .then(response => response.json())
+          .then(data => console.log(data));
+      }
 
-    render() {      
-        return (
+          return (
           <div>
             <h1>Add Entry</h1>    
-            <form action="logEntries/" class="form-inline">
+            <form class="form-inline" onSubmit={handleSubmit(onSubmit)} >
               <div class="form-group">
-                <label htmlFor="startDateTime">Start:</label>                 
-                <input class="form-control" id="startDateTime" type="datetime-local"/>
+                <label htmlFor="startDateTime">Start:</label>                  
+                <input  class="form-control" type="datetime-local" name="start" {...register('start')} />
                 </div>
                 <div class="form-group">
                 <label htmlFor="endDateTime">End:</label>                 
-                <input class="form-control" id="endDateTime" type="datetime-local"/>
+                <input class="form-control" type="datetime-local" name="end" {...register('end')} />
                 </div>
                 <div class="form-group">
                 <label htmlFor="entryType">Type:</label>                            
-                <input class="form-control" id="entryType" type="text"/>
+                <input class="form-control" type="text" name="type" {...register('type')} />
                 </div>
-                <button class="btn btn-primary form-control">Add</button>           
-            </form>
+                <button type="submit" class="btn btn-primary form-control">Add</button>           
+            </form>         
           </div>      
-        );    
-  } 
-  
-
+        ); 
 }
