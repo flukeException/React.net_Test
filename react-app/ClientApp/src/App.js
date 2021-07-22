@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
-import { TimeLogDemo } from './components/TimeLogDemo';
+import TimeLogDemo from './components/TimeLogDemo';
 
 
 import './custom.css'

@@ -13,21 +13,19 @@ namespace react_app.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(LogEntriesRepo.Instance.GetDayLogsforDate(new DateTime(2021, 07, 20, 08, 00, 00)));
+            LogEntriesRepo.Instance.AddLogEntry(new LogEntry(DateTime.UtcNow.AddHours(-5), DateTime.UtcNow, "Work"));
+            return Ok(LogEntriesRepo.Instance.GetDayLogsforDate(new DateTime(2021, 07, 22, 08, 00, 00)));
         }
 
         
         [HttpPost]       
         public IActionResult Add(AddEntryViewModel entry)
         {
-
-            LogType logType = new LogType(entry.Type);
-
             LogEntry logEntry = new LogEntry
             (
                 entry.Start,
                 entry.End,
-                logType
+                entry.Type
            );
 
             LogEntriesRepo.Instance.AddLogEntry(logEntry);

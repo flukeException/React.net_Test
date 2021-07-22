@@ -1,7 +1,7 @@
 import React from 'react';
 import {useForm,} from 'react-hook-form';
 
-export default function AddTimeLog(){
+export default function AddTimeLog(props){
 
       const {register, handleSubmit,} = useForm();
       const onSubmit = (data) => {
@@ -12,7 +12,7 @@ export default function AddTimeLog(){
       };
       fetch('logentries/add', requestOptions)
           .then(response => response.json())
-          .then(data => console.log(data));
+          .then(data => props.returnData(data));
       }
 
           return (

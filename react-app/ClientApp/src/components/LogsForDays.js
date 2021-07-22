@@ -23,7 +23,7 @@ export default function LogsForDays(props) {
                     <tr key={entry.startTime}>
                     <td>{localTime(entry.startTime)}</td>
                     <td>{localTime(entry.endTime)}</td>
-                    <td>{entry.type.typeName}</td>
+                    <td>{entry.type}</td>
                     <td>{entry.hours}</td>                                        
                     </tr>
                 )}

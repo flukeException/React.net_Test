@@ -11,7 +11,7 @@ namespace CSharpUnitTests
         [TestMethod]
         public void GetDayLogsforDate_StartDate()
         {
-            LogEntry work = new LogEntry(new DateTime(2021, 07, 02, 08, 00, 00), new DateTime(2021, 07, 02, 16, 00, 00), new LogType("Work"));
+            LogEntry work = new LogEntry(new DateTime(2021, 07, 02, 08, 00, 00), new DateTime(2021, 07, 02, 16, 00, 00), "Work");
             LogEntriesRepo.Instance.AddLogEntry(work);
 
             Assert.IsTrue(LogEntriesRepo.Instance.GetDayLogsforDate(new DateTime(2021, 07, 02)).Count == 1);
@@ -21,8 +21,8 @@ namespace CSharpUnitTests
         [TestMethod]
         public void GetDayLogsforDate_StartDate_And_EndDate()
         {
-            LogEntry work = new LogEntry(new DateTime(2021, 07, 02, 08, 00, 00), new DateTime(2021, 07, 02, 16, 00, 00), new LogType("Work"));
-            LogEntry sleep = new LogEntry(new DateTime(2021, 07, 01, 22, 00, 00), new DateTime(2021, 07, 02, 06, 00, 00), new LogType("Sleep"));
+            LogEntry work = new LogEntry(new DateTime(2021, 07, 02, 08, 00, 00), new DateTime(2021, 07, 02, 16, 00, 00), "Work");
+            LogEntry sleep = new LogEntry(new DateTime(2021, 07, 01, 22, 00, 00), new DateTime(2021, 07, 02, 06, 00, 00), "Sleep");
 
             LogEntriesRepo.Instance.AddLogEntry(work);
             LogEntriesRepo.Instance.AddLogEntry(sleep);
@@ -34,8 +34,8 @@ namespace CSharpUnitTests
         [TestMethod]
         public void GetDayLogsforDate_Enddate_is_Null()
         {
-            LogEntry work = new LogEntry(new DateTime(2021, 07, 02, 08, 00, 00), new DateTime(2021, 07, 02, 16, 00, 00), new LogType("Work"));
-            LogEntry sleep = new LogEntry(new DateTime(2021, 07, 01, 22, 00, 00), new LogType("Sleep"));
+            LogEntry work = new LogEntry(new DateTime(2021, 07, 02, 08, 00, 00), new DateTime(2021, 07, 02, 16, 00, 00), "Work");
+            LogEntry sleep = new LogEntry(new DateTime(2021, 07, 01, 22, 00, 00), "Sleep");
 
             LogEntriesRepo.Instance.AddLogEntry(work);
             LogEntriesRepo.Instance.AddLogEntry(sleep);

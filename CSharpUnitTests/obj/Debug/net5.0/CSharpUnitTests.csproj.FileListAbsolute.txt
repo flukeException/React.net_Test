@@ -220,3 +220,4 @@ C:\Users\Pelle\source\repos\TimeLogProject\CSharpUnitTests\obj\Debug\net5.0\CSha
 C:\Users\Pelle\source\repos\TimeLogProject\CSharpUnitTests\obj\Debug\net5.0\ref\CSharpUnitTests.dll
 C:\Users\Pelle\source\repos\TimeLogProject\CSharpUnitTests\obj\Debug\net5.0\CSharpUnitTests.pdb
 C:\Users\Pelle\source\repos\TimeLogProject\CSharpUnitTests\obj\Debug\net5.0\CSharpUnitTests.genruntimeconfig.cache
+C:\Users\Pelle\source\repos\TimeLogProject\CSharpUnitTests\bin\Debug\net5.0\package-lock.json
