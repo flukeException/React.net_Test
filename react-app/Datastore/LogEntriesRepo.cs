@@ -18,6 +18,10 @@ namespace react_app.Datastore
         }
 
         private List<LogEntry> logs;
+         public List<LogEntry> GetAll()
+        {
+            return logs;
+        }
 
         public List<LogEntry> GetDayLogsforDate(DateTime dateTime)
         {

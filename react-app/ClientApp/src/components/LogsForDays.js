@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default function LogsForDays(props) {
  
   const localTime = (date) => {
@@ -8,7 +9,7 @@ export default function LogsForDays(props) {
     return (
       <div>
         <h1 id="logsTable" >Log Entries</h1>       
-        <div>               
+         <div>
             <table className='table table-striped' aria-labelledby="logsTable">
                 <thead>
                 <tr>
@@ -29,8 +30,8 @@ export default function LogsForDays(props) {
                 )}
                 </tbody>
             </table>
+            </div>
         </div>
-      </div>
     );
   
 }

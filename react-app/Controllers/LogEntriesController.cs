@@ -12,9 +12,8 @@ namespace react_app.Controllers
     {
         [HttpGet]
         public IActionResult Get()
-        {
-            LogEntriesRepo.Instance.AddLogEntry(new LogEntry(DateTime.UtcNow.AddHours(-5), DateTime.UtcNow, "Work"));
-            return Ok(LogEntriesRepo.Instance.GetDayLogsforDate(new DateTime(2021, 07, 22, 08, 00, 00)));
+        {           
+            return Ok(LogEntriesRepo.Instance.GetAll());
         }
 
         

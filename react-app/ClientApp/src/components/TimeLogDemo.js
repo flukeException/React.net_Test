@@ -16,18 +16,19 @@ export default function TimeLogDemo() {
     }, [childReturData]);  
 
         
-        return (
-          <div class="row">
-            <div class="col-8">
-            <AddTimeLog returnData={setChildReturnData}/>             
-            <LogsForDays  parentLogs = {logs}/>
-            </div>          
-            <div class="col-4">
-            <LogsPieChart logs={logs}/>
-            </div>        
-          </div>         
-        );    
-  
+    return (
+      <div class="row">
+        <h3>TEst</h3>
+        <div class="col-8">
+           <AddTimeLog returnData={setChildReturnData}/>             
+           <LogsForDays  parentLogs = {logs}/>
+        </div>          
+        <div class="col-4">
+        <LogsPieChart logs={logs}/>
+        </div>     
+      </div>         
+    );    
+
         
 
 
