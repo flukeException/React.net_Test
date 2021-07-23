@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 export default function AddTimeLog(props){
 
-      const {register, handleSubmit,} = useForm();
+      const {register, handleSubmit} = useForm();
 
       const onSubmit = (data) => {
         const requestOptions = {
