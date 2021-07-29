@@ -19,7 +19,7 @@ export default function AddTimeLog(props){
           return (
           <div>
             <h1>Add Entry</h1>    
-            <form class="form-inline" onSubmit={handleSubmit(onSubmit)} >
+            <form class="form" onSubmit={handleSubmit(onSubmit)} >
               <div class="form-group">
                 <label htmlFor="startDateTime">Start:</label>                  
                 <input  class="form-control" type="datetime-local" {...register('start')} />
