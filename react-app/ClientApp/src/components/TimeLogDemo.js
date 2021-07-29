@@ -17,14 +17,17 @@ export default function TimeLogDemo() {
 
         
     return (
-      <div class="row">
-        <h3>TEst</h3>
-        <div class="col-8">
-           <AddTimeLog returnData={setChildReturnData}/>             
-           <LogsForDays  parentLogs = {logs}/>
+      <div>        
+        <div class="row">
+          <div class="col-6">
+              <AddTimeLog returnData={setChildReturnData}/>  
+          </div>
+            <div class="col-6">
+            <LogsPieChart logs={logs}/>
+          </div>                      
         </div>          
-        <div class="col-4">
-        <LogsPieChart logs={logs}/>
+        <div>
+            <LogsForDays  parentLogs = {logs}/> 
         </div>     
       </div>         
     );    
